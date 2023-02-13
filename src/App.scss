@@ -1,0 +1,9 @@
+@use '_variables.scss' as *;
+@use '_normalize.scss';
+
+.app__container {
+  background-color: $background;
+  width: calc(100vw - 21px);
+  margin: 44px auto;
+  max-width: 1440px;
+}
