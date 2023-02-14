@@ -7,46 +7,110 @@
   width: calc(100vw - 42px);
   margin: 44px auto;
   max-width: 1440px;
+
+  @media (min-width: 768px) {
+    width: calc(100vw - 72px);
+    margin: 64px auto;
+  }
+  @media (min-width: 1120px) {
+    width: calc(100vw - 96px);
+    margin: 190px auto;
+  }
+  @media (min-width: 1440px) {
+    width: calc(100vw - 94px);
+  }
 }
 
 .car-calculator {
   &__title {
+    max-width: 550px;
     font-style: normal;
     font-weight: 900;
     font-size: 34px;
     line-height: 90%;
     color: #111111;
+
+    @media (min-width: 768px) {
+      font-size: 54px;
+      max-width: 650px;
+    }
   }
 
   &__main {
     margin-top: 32px;
     display: flex;
     flex-direction: column;
+
+    @media (min-width: 768px) {
+      margin-top: 44px;
+    }
+    @media (min-width: 1120px) {
+      margin-top: 0;
+      flex-direction: row;
+    }
   }
 
   &__footer {
-    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 1120px) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+      }
+    }
 
     .footer-summary {
-      + .footer-summary {
-        margin-top: 29px;
+      margin-top: 29px;
+
+      @media (min-width: 768px) {
+        margin-top: 44px;
+        margin-right: 85px;
+      }
+      @media (min-width: 1120px) {
+        margin-top: 51px;
+        margin-right: 73px;
+      }
+      @media (min-width: 1440px) {
+        margin-right: 180px;
       }
 
       &__title {
         @include input-label;
         margin-bottom: 2px;
+
+        @media (min-width: 768px) {
+          margin-bottom: 8px;
+
+          font-size: 16px;
+          line-height: 150%;
+        }
       }
 
       &__value {
         @include input-styles;
         color: #333333;
+
+        @media (min-width: 768px) {
+          font-size: 54px;
+          line-height: 90%;
+        }
       }
     }
 
     .footer-button {
       margin-top: 32px;
       background: $orange;
-      width: 100%;
+      width: 280px;
       height: 60px;
       color: #ffffff;
       padding: 20px 45px 22px;
@@ -58,6 +122,22 @@
       font-weight: 900;
       font-size: 22px;
       line-height: 20px;
+
+      @media (min-width: 768px) {
+        margin-top: 44px;
+        font-size: 30px;
+        line-height: 36px;
+        width: 345px;
+        padding: 10px 52px 18px;
+      }
+      @media (min-width: 1120px) {
+        width: 330px;
+        padding: 10px 40px 18px;
+      }
+      @media (min-width: 1440px) {
+        width: 426px;
+        padding: 10px 92px 18px;
+      }
     }
   }
 }
