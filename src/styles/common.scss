@@ -1,0 +1,18 @@
+@use './variables' as *;
+
+@mixin input-styles {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 20px;
+  color: $gray;
+}
+
+@mixin input-label {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 136%;
+  color: $gray;
+}
